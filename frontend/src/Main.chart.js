@@ -55,9 +55,9 @@ function MainChart({ gameData }) {
         datasets: Object.keys(gameData.games[0].scores).map((player, key) => {
           return {
             label: player,
-            data: accumulate(gameData.games.map((game) => {
+            data: gameData.games.map((game) => {
               return game.scores[player];
-            })),
+            }),
             borderColor: borderColors[key],
             backgroundColor: borderColors[key],
           };
