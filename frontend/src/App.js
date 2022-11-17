@@ -45,7 +45,7 @@ export default function App() {
 
   useEffect(() => {
     var getData = async () => {
-      var data = await fetch("http://localhost:3000/data.json");
+      var data = await fetch("https://api.blitz.benwill.dev/data");
       data = await data.json();
       setGameData(data);
     };

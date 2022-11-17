@@ -7,7 +7,7 @@ const port = 3001;
 app.use(cors());
 
 app.get("/data", (req, res) => {
-  fs.readFile("data.json", (err, data) => {
+  fs.readFile("./data/data.json", (err, data) => {
     if (err) throw err;
     data = JSON.parse(data);
     res.send(data);

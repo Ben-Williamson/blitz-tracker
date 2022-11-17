@@ -6,3 +6,10 @@ services:
     ports:
       - "3000:80"
     container_name: frontend
+
+  api:
+    build:
+      context: ./backend
+    ports:
+      - "3001:3001"
+    container_name: backend

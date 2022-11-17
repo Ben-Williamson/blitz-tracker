@@ -19,7 +19,9 @@
     { "date": "Game 16", "scores": { "Abi": 15, "Ben": 17 } },
     { "date": "Game 17", "scores": { "Abi": 16, "Ben": 19 } },
     { "date": "Game 18", "scores": { "Abi": 20, "Ben": 10 } },
-    { "date": "16th Nov 2022", "scores": { "Abi": 15, "Ben": 13 } },
-    { "date": "Cheesegate", "scores": { "Abi": 18, "Ben": -2}}
+    { "date": "Game 19", "scores": { "Abi": 15, "Ben": 13 } },
+    { "date": "Cheesegate", "scores": { "Abi": 18, "Ben": -2}},
+    { "date": "Nooo", "scores": { "Abi": 19, "Ben": 9}},
+    { "date": "That's not a Christmas song", "scores": { "Abi": 18, "Ben": -7}}
   ]
 }
