@@ -27,6 +27,14 @@ ChartJS.register(
 export const options = {
   responsive: true,
   maintainAspectRatio: false,
+  scales: {
+    x: {
+      ticks: {
+        maxRotation: 90,
+        minRotation: 90,
+      },
+    },
+  },
   plugins: {
     legend: {
       position: "top",
@@ -108,11 +116,7 @@ function MainChart({ gameData, extraPoints, randomness }) {
     }
   }, [gameData, extraPoints, randomness]);
 
-  return (
-    <>
-      {chartData && <Line options={options} data={chartData} />}
-    </>
-  );
+  return <>{chartData && <Line options={options} data={chartData} />}</>;
 }
 
 export default MainChart;
