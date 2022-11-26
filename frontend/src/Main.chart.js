@@ -12,9 +12,7 @@ import {
 import { Line } from "react-chartjs-2";
 import { useState } from "react";
 
-import { Slider } from "@mantine/core";
-
-import { std, mean, random } from "mathjs";
+import { std, mean } from "mathjs";
 
 ChartJS.register(
   CategoryScale,
