@@ -6,7 +6,9 @@ import {
   Card,
   AppShell,
   Title,
-  Center,
+  Space,
+  Text,
+  Slider,
 } from "@mantine/core";
 
 import MainChart from "./Main.chart";
@@ -41,6 +43,9 @@ function ResultsTable({ gameData }) {
 
 export default function App() {
   const [gameData, setGameData] = useState({});
+  const [extraPoints, setExtraPoints] = useState(0);
+  const [randomness, setRandomness] = useState(1);
+
   const isBigScreen = useMediaQuery({ query: "(min-width: 1224px)" });
 
   useEffect(() => {
@@ -55,6 +60,9 @@ export default function App() {
   return (
     <AppShell>
       <Stack>
+        {/* {[extraPoints, randomness]} */}
+        {/* {JSON.stringify(gameData)} */}
+
         {isBigScreen && (
           <Grid>
             <Grid.Col span={3}>
@@ -64,6 +72,22 @@ export default function App() {
                 </Card>
                 <Card shadow="sm" p="lg" radius="md" withBorder>
                   <WinnerCard gameData={gameData} />
+                </Card>
+                <Card shadow="sm" p="lg" radius="md" withBorder>
+                  <Stack style={{ height: "100%", justifyContent: "center" }}>
+                    <Title order={4} ta="center">
+                      Predict the Future!
+                    </Title>
+                    <Space></Space>
+                    <Text>Number of Games</Text>
+                    <Slider value={extraPoints} onChange={setExtraPoints} />
+                    <Text>Randomness</Text>
+                    <Slider
+                      max={5}
+                      value={randomness}
+                      onChange={setRandomness}
+                    />
+                  </Stack>
                 </Card>
               </Stack>
             </Grid.Col>
@@ -75,7 +99,11 @@ export default function App() {
                 radius="md"
                 withBorder
               >
-                <MainChart gameData={gameData} />
+                <MainChart
+                  gameData={gameData}
+                  extraPoints={extraPoints}
+                  randomness={randomness}
+                />
               </Card>
             </Grid.Col>
           </Grid>
@@ -98,7 +126,19 @@ export default function App() {
               radius="md"
               withBorder
             >
-              <MainChart gameData={gameData} />
+              <MainChart gameData={gameData} randomness={randomness} extraPoints={extraPoints}/>
+            </Card>
+            <Card shadow="sm" p="lg" radius="md" withBorder>
+              <Stack style={{ height: "100%", justifyContent: "center" }}>
+                <Title order={4} ta="center">
+                  Predict the Future!
+                </Title>
+                <Space></Space>
+                <Text>Number of Games</Text>
+                <Slider value={extraPoints} onChange={setExtraPoints} />
+                <Text>Randomness</Text>
+                <Slider max={5} value={randomness} onChange={setRandomness} />
+              </Stack>
             </Card>
           </Stack>
         )}
