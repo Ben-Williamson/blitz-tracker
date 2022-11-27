@@ -32,6 +32,7 @@
     { "date": "Abi is trash", "scores": { "Abi": -15, "Ben": 16 } },
     { "date": "Buck your ideas up", "scores": { "Abi": 26, "Ben": 33 } },
     { "date": "That was a bit rubbish", "scores": { "Abi": 1, "Ben": 16 } },
-    { "date": "19 go fuck yourself", "scores": { "Abi": 19, "Ben": 5 } }
+    { "date": "19 go fuck yourself", "scores": { "Abi": 19, "Ben": 5 } },
+    { "date": "Sucks to suck!", "scores": { "Abi": 10, "Ben": 20 } }
   ]
 }
