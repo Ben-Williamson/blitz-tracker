@@ -1,8 +1,5 @@
 {
-  "players": [
-    "Ben",
-    "Abi"
-  ],
+  "players": ["Ben", "Abi"],
   "games": [
     {
       "date": "the first of many",

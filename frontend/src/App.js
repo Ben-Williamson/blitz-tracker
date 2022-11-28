@@ -9,8 +9,14 @@ import {
   Space,
   Text,
   Slider,
+  Box,
+  TextInput,
+  Checkbox,
+  Button,
+  PasswordInput,
+  NumberInput,
 } from "@mantine/core";
-
+import { useForm } from "@mantine/form";
 import MainChart from "./Main.chart";
 import OverallChart from "./Overall.chart";
 import WinnerCard from "./WinnerCard";
@@ -38,6 +44,79 @@ function ResultsTable({ gameData }) {
       </thead>
       <tbody>{rows}</tbody>
     </Table>
+  );
+}
+
+function AddGame({ players, setGameData }) {
+  const form = useForm({
+    initialValues: {
+      date: "",
+      password: "",
+    },
+
+    validate: {
+      password: (value) => (value === "Blitz123" ? null : "Incorrect Password"),
+    },
+  });
+
+  return (
+    <Box mx="auto">
+      {players && (
+        <form
+          onSubmit={form.onSubmit((values) => {
+            let reqBody = {};
+            reqBody["date"] = values.date;
+            reqBody["scores"] = {};
+            for (let player of players) {
+              reqBody["scores"][player] = values[player] ? values[player] : 0;
+            }
+            let sendData = async (data) => {
+              const rawResponse = await fetch("https://api.blitz.benwill.dev/addGame", {
+                method: "POST",
+                headers: {
+                  Accept: "application/json",
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              });
+              const content = await rawResponse.json();
+              setGameData(content);
+            };
+            sendData(reqBody);
+          })}
+        >
+          <TextInput
+            withAsterisk
+            label="Name"
+            placeholder="Blitz game"
+            {...form.getInputProps("date")}
+          />
+
+          {players.map((name, key) => {
+            return (
+              <NumberInput
+                key={key}
+                withAsterisk
+                label={`${name}'s Score`}
+                placeholder="0"
+                {...form.getInputProps(name)}
+              />
+            );
+          })}
+
+          <PasswordInput
+            withAsterisk
+            label="Password"
+            placeholder="Password"
+            {...form.getInputProps("password")}
+          />
+
+          <Group position="center" mt="md">
+            <Button type="submit">Add Game</Button>
+          </Group>
+        </form>
+      )}
+    </Box>
   );
 }
 
@@ -126,7 +205,11 @@ export default function App() {
               radius="md"
               withBorder
             >
-              <MainChart gameData={gameData} randomness={randomness} extraPoints={extraPoints}/>
+              <MainChart
+                gameData={gameData}
+                randomness={randomness}
+                extraPoints={extraPoints}
+              />
             </Card>
             <Card shadow="sm" p="lg" radius="md" withBorder>
               <Stack style={{ height: "100%", justifyContent: "center" }}>
@@ -144,6 +227,10 @@ export default function App() {
         )}
         <Card shadow="sm" p="lg" radius="md" withBorder>
           <ResultsTable gameData={gameData} />
+        </Card>
+
+        <Card shadow="sm" p="lg" radius="md" withBorder>
+          <AddGame players={gameData.players} setGameData={setGameData} />
         </Card>
       </Stack>
     </AppShell>
