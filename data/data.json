@@ -1,38 +1,218 @@
 {
-  "players": ["Ben", "Abi"],
+  "players": [
+    "Ben",
+    "Abi"
+  ],
   "games": [
-    { "date": "the first of many", "scores": { "Abi": 14, "Ben": 21 } },
-    { "date": "Game 2", "scores": { "Abi": 19, "Ben": 12 } },
-    { "date": "Game 3", "scores": { "Abi": 18, "Ben": 2 } },
-    { "date": "Game 69", "scores": { "Abi": 16, "Ben": 22 } },
-    { "date": "Game 5", "scores": { "Abi": 22, "Ben": -2 } },
-    { "date": "none", "scores": { "Abi": 21, "Ben": 8 } },
-    { "date": "Game 7", "scores": { "Abi": 11, "Ben": 19 } },
-    { "date": "Game 8", "scores": { "Abi": 19, "Ben": 21 } },
-    { "date": "🌈", "scores": { "Abi": 17, "Ben": 10 } },
-    { "date": "🧳", "scores": { "Abi": -6, "Ben": 24 } },
-    { "date": "Game 11", "scores": { "Abi": 27, "Ben": 14 } },
-    { "date": "Game 12", "scores": { "Abi": 20, "Ben": 29 } },
-    { "date": "Game 13", "scores": { "Abi": 24, "Ben": 11 } },
-    { "date": "Game 14", "scores": { "Abi": 4, "Ben": 18 } },
-    { "date": "Game 14", "scores": { "Abi": -5, "Ben": 13 } },
-    { "date": "Game 14", "scores": { "Abi": 15, "Ben": 17 } },
-    { "date": "Game 14", "scores": { "Abi": 16, "Ben": 19 } },
-    { "date": "Game 18", "scores": { "Abi": 20, "Ben": 10 } },
-    { "date": "Game 19", "scores": { "Abi": 15, "Ben": 13 } },
-    { "date": "Cheesegate", "scores": { "Abi": 18, "Ben": -2 } },
-    { "date": "Nooo", "scores": { "Abi": 19, "Ben": 9 } },
+    {
+      "date": "the first of many",
+      "scores": {
+        "Abi": 14,
+        "Ben": 21
+      }
+    },
+    {
+      "date": "Game 2",
+      "scores": {
+        "Abi": 19,
+        "Ben": 12
+      }
+    },
+    {
+      "date": "Game 3",
+      "scores": {
+        "Abi": 18,
+        "Ben": 2
+      }
+    },
+    {
+      "date": "Game 69",
+      "scores": {
+        "Abi": 16,
+        "Ben": 22
+      }
+    },
+    {
+      "date": "Game 5",
+      "scores": {
+        "Abi": 22,
+        "Ben": -2
+      }
+    },
+    {
+      "date": "none",
+      "scores": {
+        "Abi": 21,
+        "Ben": 8
+      }
+    },
+    {
+      "date": "Game 7",
+      "scores": {
+        "Abi": 11,
+        "Ben": 19
+      }
+    },
+    {
+      "date": "Game 8",
+      "scores": {
+        "Abi": 19,
+        "Ben": 21
+      }
+    },
+    {
+      "date": "🌈",
+      "scores": {
+        "Abi": 17,
+        "Ben": 10
+      }
+    },
+    {
+      "date": "🧳",
+      "scores": {
+        "Abi": -6,
+        "Ben": 24
+      }
+    },
+    {
+      "date": "Game 11",
+      "scores": {
+        "Abi": 27,
+        "Ben": 14
+      }
+    },
+    {
+      "date": "Game 12",
+      "scores": {
+        "Abi": 20,
+        "Ben": 29
+      }
+    },
+    {
+      "date": "Game 13",
+      "scores": {
+        "Abi": 24,
+        "Ben": 11
+      }
+    },
+    {
+      "date": "Game 14",
+      "scores": {
+        "Abi": 4,
+        "Ben": 18
+      }
+    },
+    {
+      "date": "Game 14",
+      "scores": {
+        "Abi": -5,
+        "Ben": 13
+      }
+    },
+    {
+      "date": "Game 14",
+      "scores": {
+        "Abi": 15,
+        "Ben": 17
+      }
+    },
+    {
+      "date": "Game 14",
+      "scores": {
+        "Abi": 16,
+        "Ben": 19
+      }
+    },
+    {
+      "date": "Game 18",
+      "scores": {
+        "Abi": 20,
+        "Ben": 10
+      }
+    },
+    {
+      "date": "Game 19",
+      "scores": {
+        "Abi": 15,
+        "Ben": 13
+      }
+    },
+    {
+      "date": "Cheesegate",
+      "scores": {
+        "Abi": 18,
+        "Ben": -2
+      }
+    },
+    {
+      "date": "Nooo",
+      "scores": {
+        "Abi": 19,
+        "Ben": 9
+      }
+    },
     {
       "date": "That's not a Christmas song",
-      "scores": { "Abi": 18, "Ben": -7 }
+      "scores": {
+        "Abi": 18,
+        "Ben": -7
+      }
     },
-    { "date": "It's getting sad now", "scores": { "Abi": 23, "Ben": 11 } },
-    { "date": "Pride before a fall", "scores": { "Abi": 4, "Ben": 15 } },
-    { "date": "A fall", "scores": { "Abi": 20, "Ben": -6 } },
-    { "date": "Abi is trash", "scores": { "Abi": -15, "Ben": 16 } },
-    { "date": "Buck your ideas up", "scores": { "Abi": 26, "Ben": 33 } },
-    { "date": "That was a bit rubbish", "scores": { "Abi": 1, "Ben": 16 } },
-    { "date": "19 go fuck yourself", "scores": { "Abi": 19, "Ben": 5 } },
-    { "date": "Sucks to suck!", "scores": { "Abi": 10, "Ben": 20 } }
+    {
+      "date": "It's getting sad now",
+      "scores": {
+        "Abi": 23,
+        "Ben": 11
+      }
+    },
+    {
+      "date": "Pride before a fall",
+      "scores": {
+        "Abi": 4,
+        "Ben": 15
+      }
+    },
+    {
+      "date": "A fall",
+      "scores": {
+        "Abi": 20,
+        "Ben": -6
+      }
+    },
+    {
+      "date": "Abi is trash",
+      "scores": {
+        "Abi": -15,
+        "Ben": 16
+      }
+    },
+    {
+      "date": "Buck your ideas up",
+      "scores": {
+        "Abi": 26,
+        "Ben": 33
+      }
+    },
+    {
+      "date": "That was a bit rubbish",
+      "scores": {
+        "Abi": 1,
+        "Ben": 16
+      }
+    },
+    {
+      "date": "19 go fuck yourself",
+      "scores": {
+        "Abi": 19,
+        "Ben": 5
+      }
+    },
+    {
+      "date": "Sucks to suck!",
+      "scores": {
+        "Abi": 10,
+        "Ben": 20
+      }
+    }
   ]
 }
